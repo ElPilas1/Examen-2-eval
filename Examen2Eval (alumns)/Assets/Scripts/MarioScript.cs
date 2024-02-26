@@ -100,14 +100,13 @@ public class MarioScript : MonoBehaviour
     private bool IsGrounded()
     {
         RaycastHit2D collision = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundMask);
-        foreach (RaycastHit2D raycastHit in collisions)
-        {
-            if (raycastHit.collider.gameObject.CompareTag("Suelo"))
+        
+            if (collision)
             {
                 currentJumps = 0;
                 return true;
             }
-        }
+        return false;
     }
 
     private void OnDrawGizmos()
