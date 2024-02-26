@@ -11,7 +11,7 @@ public class MarioScript : MonoBehaviour
     public LayerMask groundMask;
     public AudioClip jumpClip;
     public GameObject fireworkPrefab;
-    public int maxJump = 2;
+    public int maxJump = 3;
     public int currentJumps = 0;
     private Rigidbody2D rb;
     private SpriteRenderer _rend;
