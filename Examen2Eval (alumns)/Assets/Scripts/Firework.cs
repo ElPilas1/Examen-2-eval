@@ -20,12 +20,13 @@ public class Firework : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _rend = GetComponent<SpriteRenderer>();
-        _dir * force;
+        
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+       
     }
 }
