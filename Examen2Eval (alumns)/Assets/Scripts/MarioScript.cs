@@ -80,13 +80,17 @@ public class MarioScript : MonoBehaviour
         rb.velocity = nVel;
 
 
-        if (_intentionToJump && grnd)
+        if (_intentionToJump && (grnd || currentJumps < maxJump - 1))
         {
+
+            
+            currentJumps++;
             _animator.Play("jumpAnimation");
             AddJumpForce();
+            
         }
         _intentionToJump = false;
-
+         
         _animator.SetBool("isGrounded", grnd);
     }
 
